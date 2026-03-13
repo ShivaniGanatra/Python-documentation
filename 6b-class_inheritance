@@ -1,0 +1,21 @@
+class Human:
+    def attack(self):
+        print("attack")
+        
+    def __init__(self,health):
+        self.health = health
+
+class Warrior(Human): # this saysit inherits from human
+    def __init__(self,health,defence):
+        super().__init__(health)
+        self.defence = defence
+
+class Barbarian(Human):
+    def __init__(self,health,damage):
+        self.damage = damage
+        super().__init__(health)
+
+warrior = Warrior(50,5.5)
+barbarian = Barbarian(100,8.1)
+warrior.attack()
+barbarian.attack()
