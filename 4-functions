@@ -1,0 +1,56 @@
+
+def print_5_times():
+    counter = 0
+    while counter <= 5:
+        print(counter)
+        counter += 1
+
+#call 
+print("print")
+print_5_times()
+
+def print_5_times_with_an_arg(parameter):
+    counter = 0
+    while counter <= 5:
+        print(counter, parameter)
+        counter += 1
+
+#call 
+print("print with arg")
+print_5_times_with_an_arg("something")
+
+def print_n_times_with_an_arg(parameter, loop_amount):
+    counter = 0
+    while counter <= loop_amount:
+        print(counter, parameter)
+        counter += 1
+
+#call 
+print("print with arg")
+print_n_times_with_an_arg("something",6)
+
+def print_n_times_with_default_with_an_arg(parameter, loop_amount=3):
+    counter = 0
+    while counter < loop_amount:
+        print(counter, parameter)
+        counter += 1
+    return loop_amount
+
+#call 
+print("print with arg")
+test = print_n_times_with_default_with_an_arg("something")
+print(test)
+#can also have default parameter
+
+def shouter(string,number):
+    counter = 0
+    while counter < number:
+        counter += 1
+        if(counter > 10):
+            print("you are too loud")
+        else:
+            print(string.upper())
+    return "done"
+
+shouter("hello",11)
+
